@@ -2,15 +2,15 @@ require "metaproject"
 
 project :blog do
   klass :post do
-    attribute :title, String
-    attribute :body, String
-    attribute :tags, Array
+    attribute :title
+    attribute :body
+    attribute :tags
   end
 
   klass :comment do
-    attribute :author, String
-    attribute :created_at, Time
-    attribute :post_id, Fixnum
+    attribute :author
+    attribute :created_at
+    attribute :post_id
   end
 end
 
