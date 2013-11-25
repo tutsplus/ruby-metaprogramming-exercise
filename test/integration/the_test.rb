@@ -7,8 +7,16 @@ describe "The integration test" do
     @output = %x(ruby -Ilib #{folder}/script.rb 2>&1)
   end
 
-  it "creates a module class" do
-    @output.must_equal "Created module Blog."
+  it "creates a module" do
+    @output.must_include "Created module Blog."
   end
 
+  it "creates the post class" do
+    @output.must_include "Created class Blog::Post."
+  end
+
+  it "creates the comment class" do
+    skip
+    @output.must_include "Created class Blog::Comment."
+  end
 end
