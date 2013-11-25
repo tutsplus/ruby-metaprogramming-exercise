@@ -15,6 +15,7 @@ module MetaProject
 
     def create_class
       @klass = @mod.const_set @name.to_s.capitalize, Class.new
+      warn "Created class #@mod::#{@name.to_s.capitalize}"
     end
 
     def create_attributes

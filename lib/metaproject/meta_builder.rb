@@ -11,6 +11,7 @@ module MetaProject
 
     def execute
       mod = Object.const_set @project.capitalize, Module.new
+      warn "Created module Blog."
       @klasses.each do |klass|
         ClassCreator.new(klass, mod).create
       end

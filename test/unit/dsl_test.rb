@@ -6,6 +6,7 @@ module MetaProject
     it "creates a project" do
       builder = Minitest::Mock.new
       builder.expect :project, nil, [ :blog ]
+      builder.expect :execute, nil
 
       dsl = DSL.new builder: builder
       dsl.project :blog

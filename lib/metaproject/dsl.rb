@@ -6,6 +6,7 @@ module MetaProject
 
     def project name
       @builder.project name
+      @builder.execute
     end
   end
 end
