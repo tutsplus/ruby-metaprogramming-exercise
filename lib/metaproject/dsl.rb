@@ -4,8 +4,8 @@ module MetaProject
       @builder = options[:builder] || MetaBuilder.new
     end
 
-    def project name
-      @builder.project name
+    def project name, &block
+      @builder.project name, &block
       @builder.execute
     end
   end

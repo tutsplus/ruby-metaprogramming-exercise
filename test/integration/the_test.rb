@@ -16,7 +16,6 @@ describe "The integration test" do
   end
 
   it "creates the comment class" do
-    skip
     @output.must_include "Created class Blog::Comment."
   end
 end
