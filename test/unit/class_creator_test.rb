@@ -12,6 +12,8 @@ module MetaProject
 
       class_creator = ClassCreator.new options, mod
       class_creator.create
+
+      assert mod::Post
     end
   end
 end
